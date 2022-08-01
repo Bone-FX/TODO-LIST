@@ -1,0 +1,128 @@
+.form {
+
+
+  &-container {
+    padding: 10px 25px;
+    max-width: 500px;
+    //@include adaptive-width(500,280);
+    margin: 0 auto;
+    border: 1px solid #7a7ab6;
+    box-shadow: 0 0px 10px 1px #7a7ab6;
+    border-radius: 5%;
+    background-color: #d0ecf6;
+
+    @include respond-to(middle) {
+      max-width: 430px;
+    }
+    @include respond-to(mobile) {
+      max-width: 300px;
+    }
+
+  }
+
+
+  &__title {
+    color: #ffffff;
+    font-size: $title-large;
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+
+    @include respond-to(middle) {
+      max-width: $title-middle;
+    }
+
+    @include respond-to(mobile) {
+      max-width: $text-mobile;
+    }
+
+
+  }
+
+  &__field {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+
+    &-label {
+      color: #000000;
+      font-size: $text-large;
+      text-align: start;
+      align-self: flex-start;
+
+      @include respond-to(middle) {
+        max-width: $text-middle;
+      }
+
+      @include respond-to(mobile) {
+        max-width: $text-mobile;
+      }
+    }
+
+    &-input {
+      color: black;
+      font-size: $text-large;
+      height: 50px;
+      width: 100%;
+      border: 1.5px solid brown;
+      border-radius: 15px;
+      padding: 0 10px;
+      @include respond-to(middle) {
+        max-width: $title-middle;
+        height: 40px;
+      }
+
+      @include respond-to(mobile) {
+        max-width: $text-mobile;
+        height: 35px;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0px 4px 1px dodgerblue;
+      }
+
+      &::placeholder {
+        color: #737373;
+        font-size: $sub-text-large;
+        @include respond-to(middle) {
+          max-width: $sub-text-middle;
+
+        }
+
+        @include respond-to(mobile) {
+          max-width: $sub-text-mobile;
+
+        }
+      }
+    }
+  }
+  &__btn {
+    color: brown;
+    background-color: #ffffff;
+    margin: 10px auto;
+  }
+  &__notice {
+    color: #34a0fa;
+    text-align: center;
+    font-size: $text_large;
+    margin-top: 15px;
+
+    @include respond-to(middle) {
+      max-width: $sub-text-middle;
+
+    }
+
+    @include respond-to(mobile) {
+      max-width: $sub-text-mobile;
+    }
+  }
+  &__link {
+    color: crimson;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+}
+
